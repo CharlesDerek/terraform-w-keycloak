@@ -14,3 +14,4 @@ terraform-w-keycloak
 
 .idea/
 .terraform/
+terraform.tfstate*
