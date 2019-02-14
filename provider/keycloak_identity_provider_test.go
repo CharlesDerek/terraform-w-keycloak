@@ -6,7 +6,6 @@ import (
 	"github.com/hashicorp/terraform/helper/resource"
 	"github.com/hashicorp/terraform/terraform"
 	"github.com/charlesderek/terraform-w-keycloak/keycloak"
-	"regexp"
 	"testing"
 )
 
