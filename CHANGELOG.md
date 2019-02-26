@@ -1,3 +1,9 @@
+## 1.6.0 (Unreleased)
+
+FEATURES:
+
+new resource: keycloak_openid_client_optional_scopes ([#96](https://github.com/charlesderek/terraform-w-keycloak/pull/96))
+
 ## 1.5.0 (February 22, 2019)
 
 FEATURES:
