@@ -2,8 +2,8 @@
 
 FEATURES:
 
-new resource: keycloak_openid_client_optional_scopes ([#96](https://github.com/charlesderek/terraform-w-keycloak/pull/96))
-new resource: keycloak_openid_audience_protocol_mapper ([#97](https://github.com/charlesderek/terraform-w-keycloak/pull/97))
+* new resource: keycloak_openid_client_optional_scopes ([#96](https://github.com/charlesderek/terraform-w-keycloak/pull/96))
+* new resource: keycloak_openid_audience_protocol_mapper ([#97](https://github.com/charlesderek/terraform-w-keycloak/pull/97))
 
 ## 1.5.0 (February 22, 2019)
 
