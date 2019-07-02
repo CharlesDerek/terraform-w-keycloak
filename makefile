@@ -4,7 +4,7 @@ GOFMT_FILES?=$$(find . -name '*.go' |grep -v vendor)
 MAKEFLAGS += --silent
 
 build:
-	 GO111MODULE=on go build -o terraform-w-keycloak
+	GO111MODULE=on go build -o terraform-w-keycloak
 
 build-example: build
 	mkdir -p example/.terraform/plugins/darwin_amd64
