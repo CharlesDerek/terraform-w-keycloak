@@ -2,10 +2,11 @@ package provider
 
 import (
 	"bytes"
-	"github.com/hashicorp/terraform/helper/schema"
-	"github.com/charlesderek/terraform-w-keycloak/keycloak"
 	"log"
 	"time"
+
+	"github.com/hashicorp/terraform/helper/schema"
+	"github.com/charlesderek/terraform-w-keycloak/keycloak"
 )
 
 func splitLen(s string, n int) []string {
