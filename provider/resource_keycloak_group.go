@@ -2,9 +2,10 @@ package provider
 
 import (
 	"fmt"
+	"strings"
+
 	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/schema"
 	"github.com/charlesderek/terraform-w-keycloak/keycloak"
-	"strings"
 )
 
 func resourceKeycloakGroup() *schema.Resource {
