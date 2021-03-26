@@ -8,7 +8,9 @@ build:
 
 build-example: build
 	mkdir -p example/.terraform/plugins/terraform.local/charlesderek/keycloak/2.0.0/darwin_amd64
+	mkdir -p example/terraform.d/plugins/terraform.local/charlesderek/keycloak/2.0.0/darwin_amd64
 	cp terraform-w-keycloak example/.terraform/plugins/terraform.local/charlesderek/keycloak/2.0.0/darwin_amd64/
+	cp terraform-w-keycloak example/terraform.d/plugins/terraform.local/charlesderek/keycloak/2.0.0/darwin_amd64/
 
 local: deps
 	docker-compose up --build -d
