@@ -7,9 +7,6 @@ Terraform provider for [Keycloak](https://www.keycloak.org/).
 
 All documentation for this provider can now be found on the Terraform Registry: https://registry.terraform.io/providers/charlesderek/keycloak/latest/docs
 
-The old documentation can still be found at https://charlesderek.github.io/terraform-w-keycloak, but these docs will no
-longer be kept up to date.
-
 ## Installation
 
 v2.0.0 and above can be installed automatically using Terraform >=0.13 by using the `terraform` configuration block:
