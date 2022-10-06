@@ -1,18 +1,18 @@
 GOFMT_FILES?=$$(find . -name '*.go' |grep -v vendor)
-
-MAKEFLAGS += --silent
+GOOS?=darwin
+GOARCH?=amd64
 
 build:
 	go build -o terraform-w-keycloak
 
 build-example: build
-	mkdir -p example/.terraform/plugins/terraform.local/charlesderek/keycloak/3.0.0/darwin_amd64
-	mkdir -p example/terraform.d/plugins/terraform.local/charlesderek/keycloak/3.0.0/darwin_amd64
-	cp terraform-w-keycloak example/.terraform/plugins/terraform.local/charlesderek/keycloak/3.0.0/darwin_amd64/
-	cp terraform-w-keycloak example/terraform.d/plugins/terraform.local/charlesderek/keycloak/3.0.0/darwin_amd64/
+	mkdir -p example/.terraform/plugins/terraform.local/charlesderek/keycloak/3.0.0/$(GOOS)_$(GOARCH)
+	mkdir -p example/terraform.d/plugins/terraform.local/charlesderek/keycloak/3.0.0/$(GOOS)_$(GOARCH)
+	cp terraform-w-keycloak example/.terraform/plugins/terraform.local/charlesderek/keycloak/3.0.0/$(GOOS)_$(GOARCH)/
+	cp terraform-w-keycloak example/terraform.d/plugins/terraform.local/charlesderek/keycloak/3.0.0/$(GOOS)_$(GOARCH)/
 
 local: deps
-	docker-compose up --build -d
+	docker compose up --build -d
 	./scripts/wait-for-local-keycloak.sh
 	./scripts/create-terraform-client.sh
 
