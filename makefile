@@ -1,6 +1,6 @@
 GOFMT_FILES?=$$(find . -name '*.go' |grep -v vendor)
 GOOS?=darwin
-GOARCH?=amd64
+GOARCH?=arm64
 
 MAKEFLAGS += --silent
 
@@ -12,8 +12,8 @@ build:
 build-example: build
 	mkdir -p example/.terraform/plugins/terraform.local/charlesderek/keycloak/4.0.0/$(GOOS)_$(GOARCH)
 	mkdir -p example/terraform.d/plugins/terraform.local/charlesderek/keycloak/4.0.0/$(GOOS)_$(GOARCH)
-	cp terraform-w-keycloak example/.terraform/plugins/terraform.local/charlesderek/keycloak/4.0.0/$(GOOS)_$(GOARCH)/
-	cp terraform-w-keycloak example/terraform.d/plugins/terraform.local/charlesderek/keycloak/4.0.0/$(GOOS)_$(GOARCH)/
+	cp terraform-w-keycloak_* example/.terraform/plugins/terraform.local/charlesderek/keycloak/4.0.0/$(GOOS)_$(GOARCH)/
+	cp terraform-w-keycloak_* example/terraform.d/plugins/terraform.local/charlesderek/keycloak/4.0.0/$(GOOS)_$(GOARCH)/
 
 local: deps
 	docker compose up --build -d
